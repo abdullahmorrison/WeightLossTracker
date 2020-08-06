@@ -12,9 +12,9 @@
 
 :root {
   /*COLORS*/
-  --mainColor: #e5625e;
-  --secondaryColor: #ffffff ;
-  --tertiaryColor:#999799;
+  --mainColor: #0fa3b1;
+  --secondaryColor: #eddea4;
+  --tertiaryColor: #cacec9;
 }
 /**------------------------------------------
 **            1. lAYOUTS
@@ -24,12 +24,12 @@
   margin: 0;
   padding: 0;
 }
-html{
+html {
   /*FOR STICKY FOOTER*/
   height: 100%;
 }
 body {
-  background: var(--tertiaryColor);
+  background-color: var(--secondaryColor);
 
   font-family: "Bebas Neue", cursive;
   font-size: xx-large;
@@ -40,18 +40,16 @@ body {
   flex-direction: column;
 }
 main {
-  background: var(--mainColor);
-
   padding: 3%;
 }
 /*****************1.2 HEADER********************/
-header{
-  background: var(--secondaryColor);
+header {
+  background: var(--mainColor);
 }
 /*******************1.3 FOOTER*****************/
-footer{
-  background: var(--secondaryColor);
-
+footer {
+  background: var(--tertiaryColor);
+  text-align: center;
   /*STICKY FOOTER*/
   margin-top: auto;
 }
@@ -59,7 +57,20 @@ footer{
 **            2. COMPONENTS
 **------------------------------------------*/
 /****************2.1 Forms***************** */
-input {
-  font-size: 20px;
+label {
+  margin-top: 20px;
 }
+input {
+  border-radius: 10px;
+  font-size: 20px;
 
+  margin: 5px;
+  padding: 5px;
+}
+form {
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+
+  padding: 50px;
+}
