@@ -25,9 +25,9 @@
         "food" =>
             "CREATE TABLE food(
                 food_id int PRIMARY KEY NOT NULL AUTO_INCREMENT REFERENCES eats(food_id) ON DELETE CASCADE,
-                date date,
-                weight_kg int,
-                weight_lbs int
+                food_name varchar(255),
+                date datetime,
+                calories int
             );",
         "eats" =>
             "CREATE TABLE eats(
