@@ -8,19 +8,33 @@
                 first_name varchar(255),
                 last_name varchar(255)
             );",
-        "tracker" =>
-            "CREATE TABLE tracker(
-                tracker_id int PRIMARY KEY NOT NULL AUTO_INCREMENT REFERENCES uses(person_id) ON DELETE CASCADE,
+        "progress" =>
+            "CREATE TABLE progress(
+                progress_id int PRIMARY KEY NOT NULL AUTO_INCREMENT REFERENCES makes(progess_id) ON DELETE CASCADE,
                 date date,
-                calorieIntake int,
-                weight int,
-                foodName varchar(255)
+                weight_kg int,
+                weight_lbs int
             );",
-        "uses" =>
-            "CREATE TABLE uses(
+        "makes" =>
+            "CREATE TABLE makes(
                 person_id int,
-                tracker_id int,
-                FOREIGN KEY(person_id) REFERENCES person(person_id) ON DELETE CASCADE
+                progress_id int,
+                FOREIGN KEY(person_id) REFERENCES person(person_id) ON DELETE CASCADE,
+                FOREIGN KEY(progress_id) REFERENCES progress(progress_id) ON DELETE CASCADE
+            );",
+        "food" =>
+            "CREATE TABLE food(
+                food_id int PRIMARY KEY NOT NULL AUTO_INCREMENT REFERENCES eats(food_id) ON DELETE CASCADE,
+                date date,
+                weight_kg int,
+                weight_lbs int
+            );",
+        "eats" =>
+            "CREATE TABLE eats(
+                person_id int,
+                food_id int,
+                FOREIGN KEY(person_id) REFERENCES person(person_id) ON DELETE CASCADE,
+                FOREIGN KEY(food_id) REFERENCES food(food_id) ON DELETE CASCADE
             );"
     );
     foreach ($createQueries as $tables) {
