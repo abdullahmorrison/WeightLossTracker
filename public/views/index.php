@@ -14,9 +14,7 @@
     <title>Weight Loss Tracker</title>
 </head>
 <body>
-    <header>
-        <h1>Weight Loss Tracker</h1>
-    </header>
+    <?php include('header.php'); ?>
     <main>
         <form  action="" method="post">
             <label for="food">Food Name</label>
