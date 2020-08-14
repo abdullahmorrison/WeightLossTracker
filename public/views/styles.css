@@ -14,6 +14,8 @@
   --mainColor: #0fa3b1;
   --secondaryColor: #eddea4;
   --tertiaryColor: #cacec9;
+  /*TEXT*/
+  --mainText: rgb(0, 0, 0);
 }
 
 /**------------------------------------------
@@ -23,6 +25,7 @@
 * {
   margin: 0;
   padding: 0;
+  color: var(--mainText);
 }
 
 html {
@@ -84,4 +87,8 @@ form {
   display: grid;
   padding: 50px;
 }
+
+/**------------------------------------------
+**            2. PAGES
+**------------------------------------------*/
 /*# sourceMappingURL=styles.css.map */
