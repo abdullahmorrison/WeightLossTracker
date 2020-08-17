@@ -39,7 +39,13 @@
 </body>
 </html>
 <?php
+    /**
+     * TODO: allow user to choose between kg and lbs. Convert it in the front-end.
+     */
     if (array_key_exists('food', $_POST)) {
         addFood($conn, $_POST['food_name'], $_POST['calories']);
+    }
+    if (array_key_exists('weight', $_POST)) {
+        addProgress($conn, $_POST['weight'], 12);
     }
 ?>
