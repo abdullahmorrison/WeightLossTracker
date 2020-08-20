@@ -49,7 +49,12 @@ body {
 }
 
 main {
-  padding: 3%;
+  background-color: white;
+  border: solid 3px black;
+  border-radius: 10px;
+  width: 700px;
+  margin: 30px auto 30px auto;
+  padding: 20px;
 }
 
 /*****************1.2 HEADER********************/
@@ -82,7 +87,7 @@ footer {
 **------------------------------------------*/
 /****************2.1 Forms***************** */
 label {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 
 input {
@@ -93,11 +98,9 @@ input {
 }
 
 form {
-  background-color: white;
-  border-radius: 10px;
   display: -ms-grid;
   display: grid;
-  padding: 50px;
+  padding: 30px;
 }
 
 /**------------------------------------------

@@ -7,17 +7,12 @@
     <link rel="stylesheet" href="styles.css"/><!--STYLES-->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"><!--FONTS-->
 
-    <?php
-        include('../../private/database/insertQueries.php');
-    ?>
-
-    <title>Weight Loss Tracker</title>
+    <title>Ask Question</title>
 </head>
 <body>
     <?php include('pageComponents/header.php'); ?>
-    <main>
-        s
-    </main>
+    Question
+    
     <?php include('pageComponents/footer.php'); ?>
 </body>
 </html>
