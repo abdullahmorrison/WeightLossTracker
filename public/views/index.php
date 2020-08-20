@@ -14,9 +14,7 @@
     <title>Weight Loss Tracker</title>
 </head>
 <body>
-    <header>
-        <h1>Weight Loss Tracker</h1>
-    </header>
+    <?php include('pageComponents/header.php'); ?>
     <main>
         <form  action="" method="post">
             <label for="food">Food Name</label>
@@ -32,20 +30,18 @@
             <input id='wieght' type="text" placeholder="*required"/>
             <input type="submit" name="wieght" value="Input Weight"/><!-- DISABLE BUTTON ONCE CLICKED-->
         </form>
+        <?php
+            /**
+             * TODO: allow user to choose between kg and lbs. Convert it in the front-end.
+             */
+            if (array_key_exists('food', $_POST)) {
+                addFood($conn, $_POST['food_name'], $_POST['calories']);
+            }
+            if (array_key_exists('weight', $_POST)) {
+                addProgress($conn, $_POST['weight'], 12);
+            }
+        ?>
     </main>
-    <footer>
-        Contact: abdullahmorrison@gmail.com
-    </footer>
+    <?php include('pageComponents/footer.php'); ?>
 </body>
 </html>
-<?php
-    /**
-     * TODO: allow user to choose between kg and lbs. Convert it in the front-end.
-     */
-    if (array_key_exists('food', $_POST)) {
-        addFood($conn, $_POST['food_name'], $_POST['calories']);
-    }
-    if (array_key_exists('weight', $_POST)) {
-        addProgress($conn, $_POST['weight'], 12);
-    }
-?>
