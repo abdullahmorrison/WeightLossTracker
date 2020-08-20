@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css"/><!--STYLES-->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"><!--FONTS-->
 
+    
+    <?php
+        include('../../private/database/insertQueries.php');
+    ?>
+
     <title>Graped Data</title>
 </head>
 <body>
