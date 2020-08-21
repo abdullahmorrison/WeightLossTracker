@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"><!--FONTS-->
 
     <?php
-        include('../../private/database/insertQueries.php');
+        include('../../private/database/fetchQueries.php');
     ?>
 
     <title>Weight Loss Tracker</title>
@@ -16,7 +16,22 @@
 <body>
     <?php include('pageComponents/header.php'); ?>
     <main>
-        s
+        <h3>Track Food Eaten</h3>
+        <?php
+            // !COMMENT CODE
+            $food = getFood($conn);
+            foreach ($food as $f) {
+                echo
+                "<div class=\"foodSelection\">"
+                    .$f[0]."  (".$f[1]." cal)
+                </div>";
+            }
+        ?>
+        <a href="addFood.php">
+            <div class="foodSelection">
+                + Add New Food
+            </div>
+        </a>
     </main>
     <?php include('pageComponents/footer.php'); ?>
 </body>
