@@ -12,12 +12,16 @@
 
 :root {
   /*COLORS*/
-  --mainColor: #0fa3b1;
-  --secondaryColor: #eddea4;
-  --tertiaryColor: #cacec9;
+  --mainColor: #ffffff;
+  --secondaryColor: #ffffff00;
+  --tertiaryColor: #f84949;
 
   /*TEXT*/
   --mainText: rgb(0, 0, 0);
+
+  /*BORDER*/
+  --b: solid 2px #000000;
+  --b_radius: 5px;
 }
 /**------------------------------------------
 **            1. lAYOUTS
@@ -34,7 +38,7 @@ html {
   height: 100%;
 }
 body {
-  background-color: var(--secondaryColor);
+  background-color: var(--mainColor);
 
   font-family: "Bebas Neue", cursive;
   font-size: xx-large;
@@ -43,24 +47,26 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+
+  padding: 0 100px;
 }
 main {
   background-color: white;
-  border: solid 3px rgb(0, 0, 0);
-  border-radius: 10px;
+  border: var(--b);
+  border-radius: var(--b_radius);
   width: 700px;
 
   margin: 30px auto 30px auto;
   padding: 20px;
 }
+a {
+  text-decoration: none;
+}
 /*****************1.2 HEADER********************/
 header {
-  background: var(--mainColor);
+  background: var(--secondaryColor);
   li {
     display: inline-block;
-  }
-  a {
-    text-decoration: none;
   }
   a:hover {
     color: red;
@@ -68,7 +74,7 @@ header {
 }
 /*******************1.3 FOOTER*****************/
 footer {
-  background: var(--tertiaryColor);
+  background: var(--secondaryColor);
   text-align: center;
   /*STICKY FOOTER*/
   margin-top: auto;
@@ -81,7 +87,7 @@ label {
   /*margin-top: 20px;*/
 }
 input {
-  border-radius: 10px;
+  border-radius: var(--b_radius);
   font-size: 20px;
 
   margin: 5px;
@@ -94,3 +100,14 @@ form {
 /**------------------------------------------
 **            2. PAGES
 **------------------------------------------*/
+.foodSelection {
+  background-color: var(--tertiaryColor);
+  border: var(--b);
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+.foodSelection:hover {
+  background-color: #a8aaa8;
+  cursor: pointer;
+}
