@@ -15,6 +15,16 @@
 </head>
 <body>
     <?php include('pageComponents/header.php'); ?>
+    <form>
+        <label for="wieght">Weight</label>
+        <input id='wieght' type="text" placeholder="*required"/>
+        <input type="submit" name="wieght" value="Input Weight"/><!-- DISABLE BUTTON ONCE CLICKED-->
+    </form>
+    <?php
+        if (array_key_exists('weight', $_POST)) {
+            addProgress($conn, $_POST['weight'], 12);
+        }
+    ?>
     <main>
         <h3>Track Food Eaten</h3>
         <?php

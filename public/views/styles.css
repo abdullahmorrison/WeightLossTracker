@@ -8,6 +8,7 @@
       2. COMPONENTS
         2.1 Forms
       3. PAGES
+        3.1 Homepage
 */
 :root {
   /*COLORS*/
@@ -17,7 +18,7 @@
   /*TEXT*/
   --mainText: rgb(0, 0, 0);
   /*BORDER*/
-  --b: solid 2px #000000;
+  --b: solid 2px #00000088;
   --b_radius: 5px;
 }
 
@@ -74,8 +75,12 @@ header li {
   display: inline-block;
 }
 
+header a {
+  margin: 20px;
+}
+
 header a:hover {
-  color: red;
+  color: var(--tertiaryColor);
 }
 
 /*******************1.3 FOOTER*****************/
@@ -90,10 +95,9 @@ footer {
 **            2. COMPONENTS
 **------------------------------------------*/
 /****************2.1 Forms***************** */
-label {
-  /*margin-top: 20px;*/
-}
-
+/*label {
+  margin-top: 20px;
+}*/
 input {
   border-radius: var(--b_radius);
   font-size: 20px;
@@ -108,8 +112,9 @@ form {
 }
 
 /**------------------------------------------
-**            2. PAGES
+**            3. PAGES
 **------------------------------------------*/
+/****************3.1 Homepage ***************** */
 .foodSelection {
   background-color: var(--tertiaryColor);
   border: var(--b);
@@ -120,6 +125,8 @@ form {
 
 .foodSelection:hover {
   background-color: #a8aaa8;
+  -webkit-box-shadow: 3px 3px 3px #1b1b1b;
+          box-shadow: 3px 3px 3px #1b1b1b;
   cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
