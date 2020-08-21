@@ -12,7 +12,7 @@
         include('../../private/database/insertQueries.php');
     ?>
 
-    <title>Graphed Data</title>
+    <title>New Food</title>
 </head>
 <body>
     <?php include('pageComponents/header.php'); ?>

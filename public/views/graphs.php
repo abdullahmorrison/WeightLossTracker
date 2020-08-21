@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css"/><!--STYLES-->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"><!--FONTS-->
 
-    <title>Graped Data</title>
+    <title>Graphed Data</title>
 </head>
 <body>
     <?php include('pageComponents/header.php'); ?>
