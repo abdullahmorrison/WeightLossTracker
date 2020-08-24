@@ -16,7 +16,7 @@
 <body>
     <?php
         include('pageComponents/header.php');
-        include('../components/modal.php');
+        include('../components/modal.php'); //modal (dialog box) for selecting food
     ?>
     <form>
         <label for="wieght">Weight</label>
@@ -24,6 +24,7 @@
         <input type="submit" name="wieght" value="Input Weight"/><!-- DISABLE BUTTON ONCE CLICKED-->
     </form>
     <?php
+        //checking button click for weight
         if (array_key_exists('weight', $_POST)) {
             addProgress($conn, $_POST['weight'], 12);
         }
@@ -31,9 +32,9 @@
     <main>
         <h3>Track Food Eaten</h3>
         <?php
-            // !COMMENT CODE
-            $food = getFood($conn);
-            foreach ($food as $f) {
+            $food = getFood($conn); //getting all food from database
+            foreach ($food as $f) { //looping through each food
+                //displaying food name (f[0]) and its calories (f[1])
                 echo
                 "<div class=\"foodSelection\" onclick=displayModal()>"
                     .$f[0]."  (".$f[1]." cal)
