@@ -14,10 +14,13 @@
     <title>Weight Loss Tracker</title>
 </head>
 <body>
-    <?php include('pageComponents/header.php'); ?>
+    <?php
+        include('pageComponents/header.php');
+        include('../components/modal.php');
+    ?>
     <form>
         <label for="wieght">Weight</label>
-        <input id='wieght' type="text" placeholder="*required"/>
+        <input id='wieght' type="text" placeholder="*required" required/>
         <input type="submit" name="wieght" value="Input Weight"/><!-- DISABLE BUTTON ONCE CLICKED-->
     </form>
     <?php
@@ -32,7 +35,7 @@
             $food = getFood($conn);
             foreach ($food as $f) {
                 echo
-                "<div class=\"foodSelection\">"
+                "<div class=\"foodSelection\" onclick=displayModal()>"
                     .$f[0]."  (".$f[1]." cal)
                 </div>";
             }
