@@ -52,6 +52,9 @@
 </div>
 
 <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
   // When the user clicks the a food, open the modal 
   function displayModal() {
     modal.style.display = "block";
