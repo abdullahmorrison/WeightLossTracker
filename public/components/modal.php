@@ -19,22 +19,36 @@
   .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
     border: 1px solid #888;
+    border-radius: 10px;
     width: 40%;
+  }
+  .modal-content div{
+    padding: 10px;
+  }
+  .modal-header{
+    background-color: #f84949;
+    border-radius: 2px;
+    height: 20px;
+  }
+  .modal-footer{
+    text-align: center;
+  }
+  .modal-footer button{
+    margin: 0 20px;
   }
 
   /* The Close Button */
   .close {
-    color: #aaaaaa;
+    color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    padding: 2px;
   }
 
   .close:hover,
   .close:focus {
-    color: #000;
     text-decoration: none;
     cursor: pointer;
   }
@@ -44,10 +58,16 @@
 <div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close" onclick=closeModal()>&times;</span>
-    <p>Have you just eaten this food?</p>
-    <button>Yes</button>
-    <button onclick=closeModal()>No</button>
+    <div class="modal-header">
+      <span class="close" onclick=closeModal()>&times;</span>
+    </div>
+    <div class="modal-body">
+      <p>Have you just eaten this food?</p>
+    </div>
+    <div class="modal-footer">
+      <button>Yes</button>
+      <button onclick=closeModal()>No</button>
+    </div>
   </div>
 </div>
 
