@@ -22,13 +22,7 @@
 
         <label for="calories">Calories of Food</label>
         <input id='calories' name="calories" inputmode="numeric" placeholder="*required" required/> 
-
-        <label for="foodPicture">Picture of Food</label>
-        <input id='foodPicture' class='picture' name="foodPicture"/> 
-
-        <label for="labelPicture">Picture of Food Label</label>
-        <input id='labelPicture' class='picture' name="labelPicture"/> 
-
+        
         <input type="submit" name="food" value="Input Food Eaten"/><!-- DISABLE BUTTON ONCE CLICKED-->
     </form>
     <?php
