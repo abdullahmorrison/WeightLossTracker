@@ -62,8 +62,8 @@ main {
   background-color: white;
   border: var(--b);
   border-radius: var(--b_radius);
-  width: 700px;
-  margin: 30px auto 30px auto;
+  width: 50vw;
+  margin: 30px auto;
   padding: 20px;
 }
 
@@ -113,7 +113,9 @@ input {
 form {
   display: -ms-grid;
   display: grid;
+  margin: auto;
   padding: 30px;
+  width: 50vw;
 }
 
 /****************2.2 Buttons***************** */
