@@ -34,10 +34,10 @@
         <?php
             $food = getFood($conn); //getting all food from database
             foreach ($food as $f) { //looping through each food
-                //displaying food name (f[0]) and its calories (f[1])
+                //displaying food name (f[1]) and its calories (f[2])
                 echo
-                "<div class=\"foodSelection\" onclick=displayModal()>"
-                    .$f[0]."  (".$f[1]." cal)
+                "<div id=\"".$f[0]."\" class=\"foodSelection\" onclick=displayModal(".$f[0].")>"
+                    .$f[1]."  (".$f[2]." cal)
                 </div>";
             }
         ?>
