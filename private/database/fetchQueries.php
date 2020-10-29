@@ -18,7 +18,7 @@ function getFood($conn, $food_id = null)
         while ($rows = mysqli_fetch_assoc($res)) {
             array_push(
                 $food,
-                array($rows['food_id'], $rows['food_name'], $rows['calories'])
+                array($rows['food_id'], $rows['food_name'], $rows['calories'], $rows['date'])
             );
         }
     } else {
