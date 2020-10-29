@@ -17,6 +17,7 @@ So that a coach can track their clients progress easily and give advice on futur
 
 ## Future Possibilities
 - [ ] Allow users to input pictures of food and food labels
+- [ ] Make the "track food eaten" div a fixed size and scrollable
 - [ ] Add a tips feature
 - [ ] Add coach/admin feature
   - [ ] Add ability for users to ask questions to their coaches
