@@ -38,6 +38,11 @@
                 datasets: [{
                     label: 'Calories',
                     data: [<?php echo $foodCaloriesString ?>],
+                    backgroundColor: 'rgb(255, 0, 0)',
+                    fill: false,
+                    lineTension: 0,
+                    pointRadius: 10,
+                    pointHoverRadius: 12
                 }]
             },
             options: {
@@ -47,6 +52,9 @@
                             beginAtZero: true
                         }
                     }]
+                },
+                legend: {
+                    display: false
                 }
             }
         });
