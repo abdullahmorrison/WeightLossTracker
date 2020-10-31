@@ -9,6 +9,7 @@ So that a coach can track their clients progress easily and give advice on futur
 - [ ] Complete weight input function
 - [ ] Graph the data
   - [ ] Graph food data
+    - [ ] Convert date of food eaten data to easy-to-read format
   - [ ] Graph weight data
 - [ ] Add ability to add the same food by clicking on the food buttons
 - [ ] Move "add new food" button to top of div (top right)
